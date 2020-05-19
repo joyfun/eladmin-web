@@ -63,8 +63,11 @@ export default {
     },
     setOptions({ expectedData, actualData } = {}) {
       this.chart.setOption({
+        title: {
+          text: '节能费用对比'
+        },
         xAxis: {
-          data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+          data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
           boundaryGap: false,
           axisTick: {
             show: false
@@ -90,10 +93,10 @@ export default {
           }
         },
         legend: {
-          data: ['expected', 'actual']
+          data: ['2019', '2020']
         },
         series: [{
-          name: 'expected', itemStyle: {
+          name: '2019', itemStyle: {
             normal: {
               color: '#FF005A',
               lineStyle: {
@@ -109,7 +112,7 @@ export default {
           animationEasing: 'cubicInOut'
         },
         {
-          name: 'actual',
+          name: '2020',
           smooth: true,
           type: 'line',
           itemStyle: {

@@ -38,9 +38,15 @@ export const constantRouterMap = [
     children: [
       {
         path: 'dashboard',
-        component: (resolve) => require(['@/views/home'], resolve),
-        name: 'Dashboard',
-        meta: { title: '首页', icon: 'index', affix: true, noCache: true }
+        component: (resolve) => require(['@/views/dashboard'], resolve),
+        name: '节电费用对比',
+        meta: { title: '节能费用对比', icon: 'index', affix: true, noCache: true }
+      },
+      {
+        path: 'trend',
+        component: (resolve) => require(['@/views/dashboard/trend'], resolve),
+        name: '趋势图',
+        meta: { title: '趋势图', icon: 'index', affix: true, noCache: true }
       }
     ]
   },
